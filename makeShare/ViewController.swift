@@ -10,19 +10,30 @@ import UIKit
 
 class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate {
     
+    var timeline:[TimeLine] = [TimeLine]()
 
     @IBOutlet weak var tableview: UITableView!
     
     //let fruitsList:[String] = ["Apple","Orange","Mango"]
-    let imgs = ["01.jpg", "41aFOL5fe8L.jpg", "00.jpg", "07.jpg"]
+    
     let names = ["あやこ", "ななこ", "さちこ", "ともこ"]
     let texts = ["私の今日のコーデ♪", "しまむらで安く買いました！", "これからデート！", "きれいめコーデで決めてみました"]
+    let imgs = ["01.jpg", "41aFOL5fe8L.jpg", "00.jpg", "07.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupCells()
         tableview.delegate = self
         tableview.dataSource = self
     }
+    
+    func setupCells() {
+        for(var i = 0; i < names.count; i++) {
+            var c = TimeLine(name: names[i], image: imgs[i], msg: texts[i])
+            timeline.append(c)
+        }
+    }
+
     
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,18 +43,8 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         // tableCell の ID で UITableViewCell のインスタンスを生成
-        let cell = tableView.dequeueReusableCellWithIdentifier("tablecell") as UITableViewCell
-        
-        let nameLabel = cell.viewWithTag(1) as! UILabel
-        nameLabel.text = "\(names[indexPath.row])"
-        
-        let img = UIImage(named:"\(imgs[indexPath.row])")
-        let imageView = cell.viewWithTag(2) as! UIImageView
-        imageView.image = img
-        
-        // Tag番号 ３ で UILabel インスタンスの生成
-        let msg = cell.viewWithTag(3) as! UITextField
-        msg.text = "\(texts[indexPath.row])"
+        let cell: TimeLineCell = tableView.dequeueReusableCellWithIdentifier("tablecell", forIndexPath: indexPath) as! TimeLineCell
+        cell.setCell(timeline[indexPath.row])
         
         return cell
     }
