@@ -10,10 +10,10 @@ import Foundation
 
 class TimeLine : NSObject {
     var name:NSString
-    var image:NSString
+    var image:NSData
     var msg:NSString
     
-    init(name: String, image: NSString, msg: NSString){
+    init(name: String, image: NSData, msg: NSString){
         self.name = name
         self.image = image
         self.msg = msg

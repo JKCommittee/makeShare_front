@@ -30,7 +30,7 @@ class TimeLineCell: UITableViewCell {
         self.name.text = timeline.name as String
         //var err: NSError?
         //var imageData :NSData = NSData(contentsOfURL: timeline.image,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!
-        self.ImageView.image = UIImage(named:timeline.image as String)
+        self.ImageView.image = UIImage(data:timeline.image)
         self.msg.text = timeline.msg as String
     }
 

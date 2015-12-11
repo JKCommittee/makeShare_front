@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B061B761C195580009B5673 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B061B751C195580009B5673 /* PostData.swift */; };
 		8B1A856D1BE71F090052BB8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A856C1BE71F090052BB8B /* AppDelegate.swift */; };
 		8B1A856F1BE71F090052BB8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A856E1BE71F090052BB8B /* ViewController.swift */; };
 		8B1A85721BE71F090052BB8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1A85701BE71F090052BB8B /* Main.storyboard */; };
@@ -17,6 +18,27 @@
 		8B3CDA4C1C1117500011BD10 /* TimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3CDA4B1C1117500011BD10 /* TimeLine.swift */; };
 		8B3CDA4E1C11186C0011BD10 /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3CDA4D1C11186C0011BD10 /* TimeLineCell.swift */; };
 		8B3CDA501C1132650011BD10 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3CDA4F1C1132650011BD10 /* DetailViewController.swift */; };
+		8B629CEB1C19E1E900B00F31 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629CEA1C19E1E900B00F31 /* PostViewController.swift */; };
+		8B629D3B1C19E4E200B00F31 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D251C19E4E200B00F31 /* ELCAlbumPickerController.m */; };
+		8B629D3C1C19E4E200B00F31 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D271C19E4E200B00F31 /* ELCAsset.m */; };
+		8B629D3D1C19E4E200B00F31 /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D291C19E4E200B00F31 /* ELCAssetCell.m */; };
+		8B629D3E1C19E4E200B00F31 /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D2D1C19E4E200B00F31 /* ELCAssetTablePicker.m */; };
+		8B629D3F1C19E4E200B00F31 /* ELCConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D2F1C19E4E200B00F31 /* ELCConsole.m */; };
+		8B629D401C19E4E200B00F31 /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D311C19E4E200B00F31 /* ELCImagePickerController.m */; };
+		8B629D411C19E4E200B00F31 /* ELCOverlayImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D341C19E4E200B00F31 /* ELCOverlayImageView.m */; };
+		8B629D421C19E4E200B00F31 /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B629D361C19E4E200B00F31 /* ELCAlbumPickerController.xib */; };
+		8B629D431C19E4E200B00F31 /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B629D371C19E4E200B00F31 /* ELCAssetPicker.xib */; };
+		8B629D441C19E4E200B00F31 /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B629D381C19E4E200B00F31 /* ELCAssetTablePicker.xib */; };
+		8B629D451C19E4E200B00F31 /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B629D391C19E4E200B00F31 /* Overlay.png */; };
+		8B629D461C19E4E200B00F31 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B629D3A1C19E4E200B00F31 /* Overlay@2x.png */; };
+		8B629D501C19E4EE00B00F31 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D481C19E4EE00B00F31 /* GCD.swift */; };
+		8B629D511C19E4EE00B00F31 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D491C19E4EE00B00F31 /* Net.swift */; };
+		8B629D521C19E4EE00B00F31 /* NetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4A1C19E4EE00B00F31 /* NetData.swift */; };
+		8B629D531C19E4EE00B00F31 /* NetDownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4B1C19E4EE00B00F31 /* NetDownloadTask.swift */; };
+		8B629D541C19E4EE00B00F31 /* NetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4C1C19E4EE00B00F31 /* NetHelper.swift */; };
+		8B629D551C19E4EE00B00F31 /* NetRequestSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4D1C19E4EE00B00F31 /* NetRequestSerialization.swift */; };
+		8B629D561C19E4EE00B00F31 /* NetResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4E1C19E4EE00B00F31 /* NetResponseData.swift */; };
+		8B629D571C19E4EE00B00F31 /* NetUploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4F1C19E4EE00B00F31 /* NetUploadTask.swift */; };
 		AAFACE1E1BE72A2D00E3C7A0 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFACE181BE72A2D00E3C7A0 /* 01.jpg */; };
 		AAFACE1F1BE72A2D00E3C7A0 /* 41aFOL5fe8L.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFACE191BE72A2D00E3C7A0 /* 41aFOL5fe8L.jpg */; };
 		AAFACE201BE72A2D00E3C7A0 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFACE1A1BE72A2D00E3C7A0 /* 00.jpg */; };
@@ -43,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B061B751C195580009B5673 /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		8B1A85691BE71F090052BB8B /* makeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1A856C1BE71F090052BB8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B1A856E1BE71F090052BB8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +82,38 @@
 		8B3CDA4B1C1117500011BD10 /* TimeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
 		8B3CDA4D1C11186C0011BD10 /* TimeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
 		8B3CDA4F1C1132650011BD10 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8B629CEA1C19E1E900B00F31 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		8B629D241C19E4E200B00F31 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
+		8B629D251C19E4E200B00F31 /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
+		8B629D261C19E4E200B00F31 /* ELCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAsset.h; sourceTree = "<group>"; };
+		8B629D271C19E4E200B00F31 /* ELCAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAsset.m; sourceTree = "<group>"; };
+		8B629D281C19E4E200B00F31 /* ELCAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetCell.h; sourceTree = "<group>"; };
+		8B629D291C19E4E200B00F31 /* ELCAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetCell.m; sourceTree = "<group>"; };
+		8B629D2A1C19E4E200B00F31 /* ELCAssetPickerFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetPickerFilterDelegate.h; sourceTree = "<group>"; };
+		8B629D2B1C19E4E200B00F31 /* ELCAssetSelectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetSelectionDelegate.h; sourceTree = "<group>"; };
+		8B629D2C1C19E4E200B00F31 /* ELCAssetTablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetTablePicker.h; sourceTree = "<group>"; };
+		8B629D2D1C19E4E200B00F31 /* ELCAssetTablePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetTablePicker.m; sourceTree = "<group>"; };
+		8B629D2E1C19E4E200B00F31 /* ELCConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCConsole.h; sourceTree = "<group>"; };
+		8B629D2F1C19E4E200B00F31 /* ELCConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCConsole.m; sourceTree = "<group>"; };
+		8B629D301C19E4E200B00F31 /* ELCImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCImagePickerController.h; sourceTree = "<group>"; };
+		8B629D311C19E4E200B00F31 /* ELCImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCImagePickerController.m; sourceTree = "<group>"; };
+		8B629D321C19E4E200B00F31 /* ELCImagePickerHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCImagePickerHeader.h; sourceTree = "<group>"; };
+		8B629D331C19E4E200B00F31 /* ELCOverlayImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCOverlayImageView.h; sourceTree = "<group>"; };
+		8B629D341C19E4E200B00F31 /* ELCOverlayImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCOverlayImageView.m; sourceTree = "<group>"; };
+		8B629D361C19E4E200B00F31 /* ELCAlbumPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAlbumPickerController.xib; sourceTree = "<group>"; };
+		8B629D371C19E4E200B00F31 /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
+		8B629D381C19E4E200B00F31 /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
+		8B629D391C19E4E200B00F31 /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
+		8B629D3A1C19E4E200B00F31 /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
+		8B629D481C19E4EE00B00F31 /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		8B629D491C19E4EE00B00F31 /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		8B629D4A1C19E4EE00B00F31 /* NetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetData.swift; sourceTree = "<group>"; };
+		8B629D4B1C19E4EE00B00F31 /* NetDownloadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetDownloadTask.swift; sourceTree = "<group>"; };
+		8B629D4C1C19E4EE00B00F31 /* NetHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetHelper.swift; sourceTree = "<group>"; };
+		8B629D4D1C19E4EE00B00F31 /* NetRequestSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetRequestSerialization.swift; sourceTree = "<group>"; };
+		8B629D4E1C19E4EE00B00F31 /* NetResponseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetResponseData.swift; sourceTree = "<group>"; };
+		8B629D4F1C19E4EE00B00F31 /* NetUploadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetUploadTask.swift; sourceTree = "<group>"; };
+		8B629D581C19E5F000B00F31 /* makeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "makeShare-Bridging-Header.h"; sourceTree = "<group>"; };
 		AAFACE181BE72A2D00E3C7A0 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
 		AAFACE191BE72A2D00E3C7A0 /* 41aFOL5fe8L.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 41aFOL5fe8L.jpg; sourceTree = "<group>"; };
 		AAFACE1A1BE72A2D00E3C7A0 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
@@ -95,6 +150,8 @@
 		8B1A85601BE71F090052BB8B = {
 			isa = PBXGroup;
 			children = (
+				8B629D231C19E4E200B00F31 /* ELCImagePicker */,
+				8B629D471C19E4EE00B00F31 /* Net */,
 				8B1A856B1BE71F090052BB8B /* makeShare */,
 				8B1A85801BE71F0A0052BB8B /* makeShareTests */,
 				8B1A858B1BE71F0A0052BB8B /* makeShareUITests */,
@@ -115,8 +172,10 @@
 		8B1A856B1BE71F090052BB8B /* makeShare */ = {
 			isa = PBXGroup;
 			children = (
+				8B629D581C19E5F000B00F31 /* makeShare-Bridging-Header.h */,
 				8B1A856C1BE71F090052BB8B /* AppDelegate.swift */,
 				8B1A856E1BE71F090052BB8B /* ViewController.swift */,
+				8B061B751C195580009B5673 /* PostData.swift */,
 				8B3CDA4B1C1117500011BD10 /* TimeLine.swift */,
 				8B3CDA4F1C1132650011BD10 /* DetailViewController.swift */,
 				8B3CDA4D1C11186C0011BD10 /* TimeLineCell.swift */,
@@ -124,6 +183,7 @@
 				8B1A85731BE71F090052BB8B /* Assets.xcassets */,
 				8B1A85751BE71F0A0052BB8B /* LaunchScreen.storyboard */,
 				8B1A85781BE71F0A0052BB8B /* Info.plist */,
+				8B629CEA1C19E1E900B00F31 /* PostViewController.swift */,
 				AAFACE181BE72A2D00E3C7A0 /* 01.jpg */,
 				AAFACE191BE72A2D00E3C7A0 /* 41aFOL5fe8L.jpg */,
 				AAFACE1A1BE72A2D00E3C7A0 /* 00.jpg */,
@@ -150,6 +210,58 @@
 				8B1A858E1BE71F0A0052BB8B /* Info.plist */,
 			);
 			path = makeShareUITests;
+			sourceTree = "<group>";
+		};
+		8B629D231C19E4E200B00F31 /* ELCImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				8B629D241C19E4E200B00F31 /* ELCAlbumPickerController.h */,
+				8B629D251C19E4E200B00F31 /* ELCAlbumPickerController.m */,
+				8B629D261C19E4E200B00F31 /* ELCAsset.h */,
+				8B629D271C19E4E200B00F31 /* ELCAsset.m */,
+				8B629D281C19E4E200B00F31 /* ELCAssetCell.h */,
+				8B629D291C19E4E200B00F31 /* ELCAssetCell.m */,
+				8B629D2A1C19E4E200B00F31 /* ELCAssetPickerFilterDelegate.h */,
+				8B629D2B1C19E4E200B00F31 /* ELCAssetSelectionDelegate.h */,
+				8B629D2C1C19E4E200B00F31 /* ELCAssetTablePicker.h */,
+				8B629D2D1C19E4E200B00F31 /* ELCAssetTablePicker.m */,
+				8B629D2E1C19E4E200B00F31 /* ELCConsole.h */,
+				8B629D2F1C19E4E200B00F31 /* ELCConsole.m */,
+				8B629D301C19E4E200B00F31 /* ELCImagePickerController.h */,
+				8B629D311C19E4E200B00F31 /* ELCImagePickerController.m */,
+				8B629D321C19E4E200B00F31 /* ELCImagePickerHeader.h */,
+				8B629D331C19E4E200B00F31 /* ELCOverlayImageView.h */,
+				8B629D341C19E4E200B00F31 /* ELCOverlayImageView.m */,
+				8B629D351C19E4E200B00F31 /* Resources */,
+			);
+			path = ELCImagePicker;
+			sourceTree = "<group>";
+		};
+		8B629D351C19E4E200B00F31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B629D361C19E4E200B00F31 /* ELCAlbumPickerController.xib */,
+				8B629D371C19E4E200B00F31 /* ELCAssetPicker.xib */,
+				8B629D381C19E4E200B00F31 /* ELCAssetTablePicker.xib */,
+				8B629D391C19E4E200B00F31 /* Overlay.png */,
+				8B629D3A1C19E4E200B00F31 /* Overlay@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8B629D471C19E4EE00B00F31 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				8B629D481C19E4EE00B00F31 /* GCD.swift */,
+				8B629D491C19E4EE00B00F31 /* Net.swift */,
+				8B629D4A1C19E4EE00B00F31 /* NetData.swift */,
+				8B629D4B1C19E4EE00B00F31 /* NetDownloadTask.swift */,
+				8B629D4C1C19E4EE00B00F31 /* NetHelper.swift */,
+				8B629D4D1C19E4EE00B00F31 /* NetRequestSerialization.swift */,
+				8B629D4E1C19E4EE00B00F31 /* NetResponseData.swift */,
+				8B629D4F1C19E4EE00B00F31 /* NetUploadTask.swift */,
+			);
+			path = Net;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,13 +369,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B629D431C19E4E200B00F31 /* ELCAssetPicker.xib in Resources */,
+				8B629D421C19E4E200B00F31 /* ELCAlbumPickerController.xib in Resources */,
 				8B1A85771BE71F0A0052BB8B /* LaunchScreen.storyboard in Resources */,
 				AAFACE1F1BE72A2D00E3C7A0 /* 41aFOL5fe8L.jpg in Resources */,
 				AAFACE211BE72A2D00E3C7A0 /* 07.jpg in Resources */,
+				8B629D461C19E4E200B00F31 /* Overlay@2x.png in Resources */,
 				8B1A85741BE71F090052BB8B /* Assets.xcassets in Resources */,
+				8B629D441C19E4E200B00F31 /* ELCAssetTablePicker.xib in Resources */,
 				AAFACE201BE72A2D00E3C7A0 /* 00.jpg in Resources */,
 				AAFACE231BE72A2D00E3C7A0 /* 03.jpg in Resources */,
 				AAFACE1E1BE72A2D00E3C7A0 /* 01.jpg in Resources */,
+				8B629D451C19E4E200B00F31 /* Overlay.png in Resources */,
 				AAFACE251BE72C9700E3C7A0 /* 61HFaGJfqoL._SL1424_.jpg in Resources */,
 				8B1A85721BE71F090052BB8B /* Main.storyboard in Resources */,
 			);
@@ -290,11 +407,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B629D531C19E4EE00B00F31 /* NetDownloadTask.swift in Sources */,
+				8B629D501C19E4EE00B00F31 /* GCD.swift in Sources */,
+				8B629D551C19E4EE00B00F31 /* NetRequestSerialization.swift in Sources */,
 				8B3CDA4E1C11186C0011BD10 /* TimeLineCell.swift in Sources */,
+				8B629D3C1C19E4E200B00F31 /* ELCAsset.m in Sources */,
+				8B629D3F1C19E4E200B00F31 /* ELCConsole.m in Sources */,
+				8B061B761C195580009B5673 /* PostData.swift in Sources */,
+				8B629CEB1C19E1E900B00F31 /* PostViewController.swift in Sources */,
 				8B1A856F1BE71F090052BB8B /* ViewController.swift in Sources */,
+				8B629D3D1C19E4E200B00F31 /* ELCAssetCell.m in Sources */,
+				8B629D521C19E4EE00B00F31 /* NetData.swift in Sources */,
+				8B629D3B1C19E4E200B00F31 /* ELCAlbumPickerController.m in Sources */,
+				8B629D561C19E4EE00B00F31 /* NetResponseData.swift in Sources */,
+				8B629D571C19E4EE00B00F31 /* NetUploadTask.swift in Sources */,
+				8B629D411C19E4E200B00F31 /* ELCOverlayImageView.m in Sources */,
+				8B629D401C19E4E200B00F31 /* ELCImagePickerController.m in Sources */,
+				8B629D511C19E4EE00B00F31 /* Net.swift in Sources */,
+				8B629D541C19E4EE00B00F31 /* NetHelper.swift in Sources */,
 				8B3CDA501C1132650011BD10 /* DetailViewController.swift in Sources */,
 				8B3CDA4C1C1117500011BD10 /* TimeLine.swift in Sources */,
 				8B1A856D1BE71F090052BB8B /* AppDelegate.swift in Sources */,
+				8B629D3E1C19E4E200B00F31 /* ELCAssetTablePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +575,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jkcommittee.makeShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "makeShare/makeShare-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "makeShare/makeShare-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -455,6 +591,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jkcommittee.makeShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "makeShare/makeShare-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "makeShare/makeShare-Bridging-Header.h";
 			};
 			name = Release;
 		};
