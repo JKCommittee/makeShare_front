@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83DFC9291C1A6512008BCAF3 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DFC9281C1A6512008BCAF3 /* MypageViewController.swift */; };
 		8B061B761C195580009B5673 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B061B751C195580009B5673 /* PostData.swift */; };
 		8B1A856D1BE71F090052BB8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A856C1BE71F090052BB8B /* AppDelegate.swift */; };
 		8B1A856F1BE71F090052BB8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A856E1BE71F090052BB8B /* ViewController.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83DFC9281C1A6512008BCAF3 /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		8B061B751C195580009B5673 /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		8B1A85691BE71F090052BB8B /* makeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = makeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1A856C1BE71F090052BB8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				8B3CDA4B1C1117500011BD10 /* TimeLine.swift */,
 				8B3CDA4F1C1132650011BD10 /* DetailViewController.swift */,
 				8B3CDA4D1C11186C0011BD10 /* TimeLineCell.swift */,
+				83DFC9281C1A6512008BCAF3 /* MypageViewController.swift */,
 				8B1A85701BE71F090052BB8B /* Main.storyboard */,
 				8B1A85731BE71F090052BB8B /* Assets.xcassets */,
 				8B1A85751BE71F0A0052BB8B /* LaunchScreen.storyboard */,
@@ -427,6 +430,7 @@
 				8B629D541C19E4EE00B00F31 /* NetHelper.swift in Sources */,
 				8B3CDA501C1132650011BD10 /* DetailViewController.swift in Sources */,
 				8B3CDA4C1C1117500011BD10 /* TimeLine.swift in Sources */,
+				83DFC9291C1A6512008BCAF3 /* MypageViewController.swift in Sources */,
 				8B1A856D1BE71F090052BB8B /* AppDelegate.swift in Sources */,
 				8B629D3E1C19E4E200B00F31 /* ELCAssetTablePicker.m in Sources */,
 			);
