@@ -42,7 +42,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
             // 全投稿リストの取得
             let json = try! NSData(contentsOfURL: NSURL(string: url + "get_all_post.php")!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
             let data = try! NSJSONSerialization.JSONObjectWithData(json, options: []) as! NSArray
-            print("\(data)")
+            //print("\(data)")
             
             for i in 0..<data.count {
                 postList.append(PostData(data: data[i] as! NSDictionary, url: url))
