@@ -23,6 +23,8 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     var selectedImage: UIImage?
     var selectedUserName: String?
     var selectedMsg: String?
+    var selectedId: Int?
+    var selectedUserId: Int?
     
     let url = "http://175.184.17.224/makeShare/"
     var timeline:[TimeLine] = [TimeLine]()
@@ -81,6 +83,8 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         selectedImage = UIImage(data:postList[indexPath.row].image[0])
         selectedUserName = postList[indexPath.row].screenName
         selectedMsg = postList[indexPath.row].content
+        selectedId = postList[indexPath.row].id
+        selectedUserId = postList[indexPath.row].userId
         if selectedImage != nil {
             // SubViewController へ遷移するために Segue を呼び出す
             performSegueWithIdentifier("toDetailViewController",sender: nil)
@@ -96,6 +100,8 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
             detailVC.selectedImg = selectedImage
             detailVC.selectedUserName = selectedUserName
             detailVC.selectedMsg = selectedMsg
+            detailVC.id = selectedId
+            detailVC.userId = selectedUserId
         }
     }
 

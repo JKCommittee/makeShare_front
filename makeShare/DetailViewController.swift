@@ -11,11 +11,6 @@ import UIKit
 class DetailViewController: UIViewController {
 
     
-//    @IBOutlet weak var ImageView: UIImageView!
-//    @IBOutlet weak var Text: UITextView!
-//    @IBOutlet weak var goodButton: UIToolbar!
-//    @IBOutlet weak var requestButton: UIBarButtonItem!
-//    @IBOutlet weak var pushResponce: UITextField!
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var Text: UILabel!
     @IBOutlet weak var msg: UITextView!
@@ -24,11 +19,11 @@ class DetailViewController: UIViewController {
     var selectedImg: UIImage!
     var selectedUserName: String!
     var selectedMsg: String!
+    var id: Int!
+    var userId: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         ImageView.image = selectedImg
         // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
         ImageView.contentMode = UIViewContentMode.ScaleAspectFit
@@ -37,19 +32,23 @@ class DetailViewController: UIViewController {
         msg.text = selectedMsg
     }
     
-//    @IBAction func pushGood(sender: UIBarButtonItem) {
-//        pushResponce.text = "いいねを押しました";
-//    }
+    @IBAction func request(sender: AnyObject) {
+        performSegueWithIdentifier("request", sender: nil)
+    }
     
-//    @IBAction func pushRequest(sender: UIBarButtonItem) {
-//        pushResponce.text = "リクエストを押しました";
-//        
-//        //performSegueWithIdentifier("request", sender: self)
-//
-//    }
+    @IBAction func like(sender: AnyObject) {
+        let params = ["func": "like", "id": id]
+        let net = Net(baseUrlString: "http://175.184.17.224/makeShare/")
+        net.POST("user_request.php", params: params,
+            successHandler: { responseData in
+            },
+            failureHandler: { error in
+                NSLog("Error")
+        })
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "toRequestViewController"){
+        if (segue.identifier == "request"){
             //let requestVC: RequestViewController = (segue.destinationViewController as! RequestViewController)
             //requestViewController.Text.text = "遷移できました"
             //requestVC.test = test
