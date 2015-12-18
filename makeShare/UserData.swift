@@ -43,7 +43,7 @@ class UserData {
         follower = Int(data["follower"] as! String)!
     }
     
-    func getRelation(data: NSDictionary, url: String) {
+    func setRelation(data: NSDictionary, url: String) {
         for  user in data["follows"] as! NSArray {
             follows.append(UserData(data: user as! NSDictionary, url: url))
         }

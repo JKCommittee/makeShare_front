@@ -40,6 +40,8 @@
 		8B629D551C19E4EE00B00F31 /* NetRequestSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4D1C19E4EE00B00F31 /* NetRequestSerialization.swift */; };
 		8B629D561C19E4EE00B00F31 /* NetResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4E1C19E4EE00B00F31 /* NetResponseData.swift */; };
 		8B629D571C19E4EE00B00F31 /* NetUploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B629D4F1C19E4EE00B00F31 /* NetUploadTask.swift */; };
+		AA2E69521C22B981002270DB /* RelationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E69511C22B981002270DB /* RelationViewController.swift */; };
+		AA2E69541C22C292002270DB /* RelationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E69531C22C292002270DB /* RelationCell.swift */; };
 		AA43B22B1C1B87B000323905 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA43B22A1C1B87B000323905 /* UserData.swift */; };
 		AAFACE1E1BE72A2D00E3C7A0 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFACE181BE72A2D00E3C7A0 /* 01.jpg */; };
 		AAFACE1F1BE72A2D00E3C7A0 /* 41aFOL5fe8L.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAFACE191BE72A2D00E3C7A0 /* 41aFOL5fe8L.jpg */; };
@@ -117,6 +119,8 @@
 		8B629D4E1C19E4EE00B00F31 /* NetResponseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetResponseData.swift; sourceTree = "<group>"; };
 		8B629D4F1C19E4EE00B00F31 /* NetUploadTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetUploadTask.swift; sourceTree = "<group>"; };
 		8B629D581C19E5F000B00F31 /* makeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "makeShare-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA2E69511C22B981002270DB /* RelationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationViewController.swift; sourceTree = "<group>"; };
+		AA2E69531C22C292002270DB /* RelationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationCell.swift; sourceTree = "<group>"; };
 		AA43B22A1C1B87B000323905 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AAFACE181BE72A2D00E3C7A0 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
 		AAFACE191BE72A2D00E3C7A0 /* 41aFOL5fe8L.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 41aFOL5fe8L.jpg; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				8B061B751C195580009B5673 /* PostData.swift */,
 				8B3CDA4B1C1117500011BD10 /* TimeLine.swift */,
 				8B3CDA4F1C1132650011BD10 /* DetailViewController.swift */,
+				AA2E69511C22B981002270DB /* RelationViewController.swift */,
+				AA2E69531C22C292002270DB /* RelationCell.swift */,
 				8B3CDA4D1C11186C0011BD10 /* TimeLineCell.swift */,
 				83DFC9281C1A6512008BCAF3 /* MypageViewController.swift */,
 				AA43B22A1C1B87B000323905 /* UserData.swift */,
@@ -423,6 +429,7 @@
 				8B629CEB1C19E1E900B00F31 /* PostViewController.swift in Sources */,
 				8B1A856F1BE71F090052BB8B /* ViewController.swift in Sources */,
 				8B629D3D1C19E4E200B00F31 /* ELCAssetCell.m in Sources */,
+				AA2E69521C22B981002270DB /* RelationViewController.swift in Sources */,
 				8B629D521C19E4EE00B00F31 /* NetData.swift in Sources */,
 				8B629D3B1C19E4E200B00F31 /* ELCAlbumPickerController.m in Sources */,
 				8B629D561C19E4EE00B00F31 /* NetResponseData.swift in Sources */,
@@ -433,6 +440,7 @@
 				8B629D541C19E4EE00B00F31 /* NetHelper.swift in Sources */,
 				AA43B22B1C1B87B000323905 /* UserData.swift in Sources */,
 				8B3CDA501C1132650011BD10 /* DetailViewController.swift in Sources */,
+				AA2E69541C22C292002270DB /* RelationCell.swift in Sources */,
 				8B3CDA4C1C1117500011BD10 /* TimeLine.swift in Sources */,
 				83DFC9291C1A6512008BCAF3 /* MypageViewController.swift in Sources */,
 				8B1A856D1BE71F090052BB8B /* AppDelegate.swift in Sources */,

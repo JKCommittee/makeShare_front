@@ -250,6 +250,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="フォロー"/>
+                                <connections>
+                                    <action selector="FollowButton:" destination="UyU-ps-GfT" eventType="touchUpInside" id="MfX-9U-svS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -258,11 +261,13 @@
                     <navigationItem key="navigationItem" title="マイページ" id="dXP-3V-rWM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="follows" destination="Vbg-c9-H0T" id="0TL-2U-Tz2"/>
+                        <outlet property="follow" destination="HrE-OE-cLp" id="7xq-q2-HIK"/>
+                        <outlet property="follower" destination="1OM-4x-AYL" id="i7i-eQ-hTb"/>
                         <outlet property="profileText" destination="Knv-fq-5EZ" id="Rhz-am-taq"/>
                         <outlet property="userImage" destination="vZv-RL-qA1" id="BfC-ua-UpK"/>
                         <outlet property="userName" destination="guo-yG-7Ym" id="4dF-vU-vLj"/>
                         <segue destination="XPb-68-DcG" kind="push" identifier="follow" id="ojH-fx-iKg"/>
+                        <segue destination="XPb-68-DcG" kind="push" identifier="follower" id="m54-ee-eEb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlS-Ji-YFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,14 +277,69 @@
         <!--ユーザー一覧-->
         <scene sceneID="DdY-8x-BcT">
             <objects>
-                <viewController id="XPb-68-DcG" sceneMemberID="viewController">
+                <viewController id="XPb-68-DcG" customClass="RelationViewController" customModule="makeShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gBx-6u-O4S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="168" sectionHeaderHeight="28" sectionFooterHeight="28" id="7aX-i9-aCD">
+                                <rect key="frame" x="0.0" y="66" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" rowHeight="168" id="Kc0-9H-Pga" customClass="RelationCell" customModule="makeShare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="168"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kc0-9H-Pga" id="Ihc-LP-h51">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="FE7-XP-ncB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tDq-CG-ijl">
+                                                    <rect key="frame" x="139" y="41" width="79" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="screenName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Xc-af-eAp">
+                                                    <rect key="frame" x="139" y="12" width="97" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="N8A-9t-MJs">
+                                                    <rect key="frame" x="8" y="83" width="359" height="76"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="FE7-XP-ncB" id="7el-MA-XGf"/>
+                                            <outlet property="intro" destination="N8A-9t-MJs" id="9Ic-03-LzY"/>
+                                            <outlet property="screenName" destination="7Xc-af-eAp" id="G9Y-NF-idK"/>
+                                            <outlet property="userName" destination="tDq-CG-ijl" id="BDQ-gG-lc5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ユーザー一覧" id="dGn-XQ-7tL"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="4RD-QQ-z00"/>
+                    <navigationItem key="navigationItem" title="ユーザー一覧" id="ieb-a3-beZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableview" destination="7aX-i9-aCD" id="RZO-AA-jrg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SkX-1s-523" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,8 +382,12 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUC-Jk-SBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarItem title="Item" id="PeP-gM-9ts"/>
             </objects>
             <point key="canvasLocation" x="1064.5" y="223.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ojH-fx-iKg"/>
+    </inferredMetricsTieBreakers>
 </document>
