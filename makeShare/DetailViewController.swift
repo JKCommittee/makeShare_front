@@ -10,29 +10,22 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    
-//    @IBOutlet weak var ImageView: UIImageView!
-//    @IBOutlet weak var Text: UITextView!
-//    @IBOutlet weak var goodButton: UIToolbar!
-//    @IBOutlet weak var requestButton: UIBarButtonItem!
-//    @IBOutlet weak var pushResponce: UITextField!
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var Text: UILabel!
     @IBOutlet weak var msg: UITextView!
     
-    let test = "hogehoge"
     var selectedImg: UIImage!
     var selectedUserName: String!
     var selectedMsg: String!
+    var selectedId: Int!
+    var selectedUserId: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         ImageView.image = selectedImg
         // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
         ImageView.contentMode = UIViewContentMode.ScaleAspectFit
-        //ImageView.image = detailImage;
         Text.text = selectedUserName
         msg.text = selectedMsg
     }
@@ -50,10 +43,9 @@ class DetailViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "toRequestViewController"){
-            //let requestVC: RequestViewController = (segue.destinationViewController as! RequestViewController)
-            //requestViewController.Text.text = "遷移できました"
-            //requestVC.test = test
-            
+            let requestVC: RequestViewController = (segue.destinationViewController as! RequestViewController)
+            requestVC.selectedId = selectedId
+            requestVC.selectedUserId = selectedUserId
         }
     }
 }
