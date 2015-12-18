@@ -180,7 +180,6 @@
                         <outlet property="ImageView" destination="RgT-Hj-nnB" id="dHK-AC-mQE"/>
                         <outlet property="Text" destination="voN-Fw-HQm" id="rGu-65-zz7"/>
                         <outlet property="msg" destination="q7Z-gx-I6G" id="UKV-aI-bLE"/>
-                        <outlet property="request" destination="Lxj-xg-QfZ" id="7am-pu-yuJ"/>
                         <segue destination="rjl-ZI-xzD" kind="push" identifier="request" id="XDs-kk-XNv"/>
                     </connections>
                 </viewController>
@@ -328,7 +327,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" rowHeight="168" id="Kc0-9H-Pga" customClass="RelationCell" customModule="makeShare" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="168"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="168"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kc0-9H-Pga" id="Ihc-LP-h51">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>

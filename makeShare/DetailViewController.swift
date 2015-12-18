@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func request(sender: AnyObject) {
-        performSegueWithIdentifier("request", sender: nil)
+        //performSegueWithIdentifier("request", sender: nil)
     }
     
     @IBAction func like(sender: AnyObject) {
