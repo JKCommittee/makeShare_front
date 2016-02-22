@@ -164,7 +164,7 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="voN-Fw-HQm">
-                                <rect key="frame" x="94" y="63" width="186" height="49"/>
+                                <rect key="frame" x="48" y="63" width="186" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -205,6 +205,9 @@
                                 <rect key="frame" x="150" y="271" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="リクエスト"/>
+                                <connections>
+                                    <action selector="requestButton:" destination="rjl-ZI-xzD" eventType="touchUpInside" id="9PE-a7-Tb4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,6 +215,9 @@
                     <navigationItem key="navigationItem" title="リクエスト" id="dGm-ge-Smd"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="text" destination="MW2-3f-rbh" id="p6T-CA-iI8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fy-k7-Q3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -221,7 +227,7 @@
         <scene sceneID="pKl-zE-DrU">
             <objects>
                 <navigationController id="FHD-Ar-hla" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="OBV-Wl-lm7"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="OBV-Wl-lm7" userLabel="mypage"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="biJ-PK-c4H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -327,16 +333,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" rowHeight="168" id="Kc0-9H-Pga" customClass="RelationCell" customModule="makeShare" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="168"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="168"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kc0-9H-Pga" id="Ihc-LP-h51">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="FE7-XP-ncB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="75"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tDq-CG-ijl">
                                                     <rect key="frame" x="139" y="41" width="79" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -359,6 +361,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="FE7-XP-ncB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>

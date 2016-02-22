@@ -15,21 +15,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var Text: UILabel!
     @IBOutlet weak var msg: UITextView!
     
-    let test = "hogehoge"
-    var selectedImg: UIImage!
-    var selectedUserName: String!
-    var selectedMsg: String!
-    var id: Int!
-    var userId: Int!
+    var postData: PostData!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ImageView.image = selectedImg
+        ImageView.image = UIImage(data: postData.image[0])
         // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
         ImageView.contentMode = UIViewContentMode.ScaleAspectFit
         //ImageView.image = detailImage;
-        Text.text = selectedUserName
-        msg.text = selectedMsg
+        Text.text = postData.screenName
+        msg.text = postData.content
     }
     
     @IBAction func request(sender: AnyObject) {
@@ -37,7 +33,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func like(sender: AnyObject) {
-        let params = ["func": "like", "id": id]
+        let params = ["func": "like", "id": postData.id]
         let net = Net(baseUrlString: "http://175.184.17.224/makeShare/")
         net.POST("user_request.php", params: params,
             successHandler: { responseData in
@@ -50,8 +46,9 @@ class DetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "request"){
             let requestVC: RequestViewController = (segue.destinationViewController as! RequestViewController)
-            requestVC
-            
+            requestVC.senderId = 1
+            requestVC.receiveId = postData.userId
+            requestVC.postId = postData.id
         }
     }
 }

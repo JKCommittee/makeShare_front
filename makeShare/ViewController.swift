@@ -9,22 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate {
-    
-    //var timeline:[TimeLine] = [TimeLine]()
 
     @IBOutlet weak var tableview: UITableView!
     
-    //let fruitsList:[String] = ["Apple","Orange","Mango"]
-    
-    let names = ["あやこ", "ななこ", "さちこ", "ともこ"]
-    let texts = ["私の今日のコーデ♪", "しまむらで安く買いました！", "これからデート！", "きれいめコーデで決めてみました"]
-    let imgs = ["01.jpg", "41aFOL5fe8L.jpg", "00.jpg", "07.jpg"]
-    
-    var selectedImage: UIImage?
-    var selectedUserName: String?
-    var selectedMsg: String?
-    var selectedId: Int?
-    var selectedUserId: Int?
+    var selectedPost: PostData?
     
     let url = "http://175.184.17.224/makeShare/"
     var timeline:[TimeLine] = [TimeLine]()
@@ -78,18 +66,11 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
     
 //    // Cell が選択された場合
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-        print(indexPath.row)
         // [indexPath.row] から画像名を探し、UImage を設定
-        selectedImage = UIImage(data:postList[indexPath.row].image[0])
-        selectedUserName = postList[indexPath.row].screenName
-        selectedMsg = postList[indexPath.row].content
-        selectedId = postList[indexPath.row].id
-        selectedUserId = postList[indexPath.row].userId
-        if selectedImage != nil {
-            // SubViewController へ遷移するために Segue を呼び出す
-            performSegueWithIdentifier("toDetailViewController",sender: nil)
-        }
-        
+
+        selectedPost = postList[indexPath.row]
+        // SubViewController へ遷移するために Segue を呼び出す
+        performSegueWithIdentifier("toDetailViewController",sender: nil)
     }
     
     // Segue 準備
@@ -97,11 +78,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         if (segue.identifier == "toDetailViewController") {
             let detailVC: DetailViewController = (segue.destinationViewController as? DetailViewController)!
             // SubViewController のselectedImgに選択された画像を設定する
-            detailVC.selectedImg = selectedImage
-            detailVC.selectedUserName = selectedUserName
-            detailVC.selectedMsg = selectedMsg
-            detailVC.id = selectedId
-            detailVC.userId = selectedUserId
+            detailVC.postData = selectedPost
         }
     }
 
