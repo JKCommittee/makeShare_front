@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func request(sender: AnyObject) {
-        //performSegueWithIdentifier("request", sender: nil)
+        performSegueWithIdentifier("request", sender: nil)
     }
     
     @IBAction func like(sender: AnyObject) {
@@ -49,9 +49,8 @@ class DetailViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "request"){
-            //let requestVC: RequestViewController = (segue.destinationViewController as! RequestViewController)
-            //requestViewController.Text.text = "遷移できました"
-            //requestVC.test = test
+            let requestVC: RequestViewController = (segue.destinationViewController as! RequestViewController)
+            requestVC
             
         }
     }
